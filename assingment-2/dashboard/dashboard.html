@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li class="active">Overview</li>
+                <li>Projects</li>
+                <li>Campaigns</li>
+                <li>Documents</li>
+                <li>Analytics</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Overview</h1>
+                <input type="text" placeholder="Search..." class="search-bar">
+            </header>
+
+            <!-- Stats Cards -->
+            <section class="stats">
+                <div class="card">
+                    <h3>Views</h3>
+                    <p>7,265</p>
+                </div>
+                <div class="card">
+                    <h3>Visits</h3>
+                    <p>3,671</p>
+                </div>
+                <div class="card">
+                    <h3>New Users</h3>
+                    <p>156</p>
+                </div>
+                <div class="card">
+                    <h3>Active Users</h3>
+                    <p>2,318</p>
+                </div>
+            </section>
+
+            <!-- Charts -->
+            <section class="charts">
+                <div class="chart-container">
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Line Chart
+        new Chart(document.getElementById("lineChart"), {
+            type: 'line',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: "Total Users",
+                    data: [1200, 1900, 3000, 5000, 2300, 3500],
+                    borderColor: "#6A5ACD",
+                    fill: false
+                }]
+            }
+        });
+
+        // Bar Chart
+        new Chart(document.getElementById("barChart"), {
+            type: 'bar',
+            data: {
+                labels: ["Google", "Instagram", "Facebook", "Twitter"],
+                datasets: [{
+                    label: "Traffic Sources",
+                    data: [300, 500, 700, 200],
+                    backgroundColor: ["#6A5ACD", "#4CAF50", "#FF9800", "#F44336"]
+                }]
+            }
+        });
+
+        // Pie Chart
+        new Chart(document.getElementById("pieChart"), {
+            type: 'pie',
+            data: {
+                labels: ["USA", "Canada", "Europe", "Other"],
+                datasets: [{
+                    data: [55, 25, 15, 5],
+                    backgroundColor: ["#6A5ACD", "#4CAF50", "#FF9800", "#F44336"]
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

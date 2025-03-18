@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="donation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>We Can Save The Future</h1>
+        </div>
+        <div class="right-panel">
+            <h2><img src="logo.png" alt="Logo"> heavenchild</h2>
+            <p>Welcome to HeavenChild donations, please fill out the form below.</p>
+            <form>
+                <label>Choose a donation type</label>
+                <select>
+                    <option>Cost of education</option>
+                    <option>Food & Shelter</option>
+                    <option>Medical Help</option>
+                </select>
+
+                <label>Choose a donation amount</label>
+                <div class="donation-amount">
+                    <input type="radio" name="amount" id="amount25"><label for="amount25">$25</label>
+                    <input type="radio" name="amount" id="amount50"><label for="amount50">$50</label>
+                    <input type="radio" name="amount" id="amount100"><label for="amount100">$100</label>
+                </div>
+                <a href="#">Enter a custom donation amount</a>
+
+                <label>Choose a donation frequency</label>
+                <div class="frequency">
+                    <input type="radio" name="frequency" id="monthly"><label for="monthly">Monthly</label>
+                    <input type="radio" name="frequency" id="one-time"><label for="one-time">One-time</label>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" class="cancel">Cancel</button>
+                    <button type="submit" class="checkout">Go to Checkout</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
